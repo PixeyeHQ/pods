@@ -8,7 +8,7 @@ Pods is a superset of Json with comments and a simple notation that's convenient
 
 
 ## Why?
-  Json may be used on projects both for serialization tasks and for writing configuration files. Despite the obvious advantages of Json as a format (it's intuitive and good for data serialization), it's harder to read and edit than, for example, Toml/Yaml. Toml is easy to read, but it's not designed for serialization, and Yaml, subjectively, is a complex format. 
+  Json may be used on projects both for serialization tasks and for writing configuration files. Despite the obvious advantages of Json as a format (it's intuitive, more or less good for data serialization and widely spread), it's harder to read and edit than, for example, Toml/Yaml. Toml is easy to read, but it's not designed for serialization, and Yaml, subjectively, is a complex format. 
 
   
 ## Examples 📗
