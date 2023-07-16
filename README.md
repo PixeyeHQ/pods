@@ -8,7 +8,7 @@ Pods is a superset of Json with comments and a simple notation that's convenient
 
 
 ## Why?
-  Json may be used on projects both for serialization tasks and for writing configuration files. Despite the obvious advantages of Json as a format (it's intuitive and good for data serialization), it's harder to read and edit than, for example, Toml/Yaml. Toml is easy to read, but it's not designed for serialization, and Yaml, subjectively, is a complex format.
+  Json may be used on projects both for serialization tasks and for writing configuration files. Despite the obvious advantages of Json as a format (it's intuitive and good for data serialization), it's harder to read and edit than, for example, Toml/Yaml. Toml is easy to read, but it's not designed for serialization, and Yaml, subjectively, is a complex format. 
 
   
 ## Examples 📗
@@ -98,4 +98,12 @@ Whitespaces ` `, `\t`, `\v`, `\r`, `\l`, `\f`
 End of line `\l`, `\r`  
 Comments `#`
 
+
+## Usage / Contribution 🦄
+This is still mainly a personal project that I use to describe object definition or configurations in my game development routines. Though, potentially this format can be used everywhere. If you like the concept & idea
+than any documentation, bug reports, pull requests contributions are strongly welcome!
+
+
 ## Implementations ⚙️
+Currently, only Nim language implementation is awailable, as this is my daily language and I originally wrote PODS using it. 
+
