@@ -119,7 +119,7 @@ Comments `#`
 
 ## Usage / Contribution 🦄
 This is still mainly a personal project that I use to describe object definition or configurations in my game development routines. Though, potentially this format can be used everywhere. If you like the concept & idea
-than any documentation, bug reports, pull requests contributions are strongly welcome!
+than any documentation, bug reports, pull requests contributions are strongly welcome! 
 
 
 ## Implementations ⚙️
