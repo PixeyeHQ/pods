@@ -1,1 +1,101 @@
-# px.pods
+# PODS 💾
+Pack of Data    
+By Dmitry Mitrofanov (@pixeye)
+
+## What is it?
+Readable and easy typed text format both for serialization and making config files purposes.  
+Pods is a superset of Json with comments and a simple notation that's convenient for direct editing.
+
+
+## Why?
+  Json may be used on projects both for serialization tasks and for writing configuration files. Despite the obvious advantages of Json as a format (it's intuitive and good for data serialization), it's harder to read and edit than, for example, Toml/Yaml. Toml is easy to read, but it's not designed for serialization, and Yaml, subjectively, is a complex format.
+
+  
+## Examples 📗
+  Pods can be written in several formats: Dense, Sparse and Compact (relatively)  
+Sparse format:
+```
+(
+  Alain = (
+    name    = 'Alain'
+    pos     = (x=5,y=10,z=0)
+    power   = 90
+    cost    = 10
+    kind    = 'Mage'
+    items   = [['book'='Homilies and Meditations']];
+    friends = ['Roland','Cuthbert']
+    dead    = true
+  )
+  Cuthbert = (
+    name    = 'Cuthbert'
+    pos     = (x=10,y=10,z=0)
+    power   = 100
+    cost    = 10
+    kind    = 'Range'
+    items   = [['necklace'='The Lookout','weapon1'='carver','weapon2'='slingshot']]
+    friends = ['Roland','Alain']
+    dead    = true
+  )
+  Roland = (
+    name    = 'Roland'
+    pos     = (x=12,y=10,z=5)
+    power   = 150
+    cost    = 20
+    kind    = 'Melee'
+    items   = [['hawk'='David']]
+    friends = ['Cuthbert','Alain','Susan']
+    dead    = false
+  )
+)
+```
+Dense format:
+  ```
+(
+# Unit A
+    Alain.name = 'Alain';
+    Alain.pos.x = 5;;
+    Alain.pos.y = 10;;
+    Alain.pos.z = 0;;
+    Alain.power = 90;
+    Alain.cost = 10;
+    Alain.kind = 'Mage';
+    Alain.items = [['book'='Homilies and Meditations']];
+    Alain.friends = ['Roland','Cuthbert'];
+    Alain.dead = true;
+# Unit B
+    Cuthbert.name = 'Cuthbert';
+    Cuthbert.pos.x = 10;;
+    Cuthbert.pos.y = 10;;
+    Cuthbert.pos.z = 0;;
+    Cuthbert.power = 100;
+    Cuthbert.cost = 10;
+    Cuthbert.kind = 'Range';
+    Cuthbert.items = [['necklace'='The Lookout','weapon1'='carver','weapon2'='slingshot']];
+    Cuthbert.friends = ['Roland','Alain'];
+    Cuthbert.dead = true;
+# Unit C
+    Roland.name = 'Roland';
+    Roland.pos.x = 12;;
+    Roland.pos.y = 10;;
+    Roland.pos.z = 5;;
+    Roland.power = 150;
+    Roland.cost = 20;
+    Roland.kind = 'Melee';
+    Roland.items = [['hawk'='David']];
+    Roland.friends = ['Cuthbert','Alain','Susan'];
+    Roland.dead = false;
+)
+  ```
+## Format rules 📘
+Objects begin with `.` or `(` and ends with `;` or `)`  
+Arrays  begin with `[` and ends with `]`  
+Tables  begin with `[[` and ends with `]]`  
+Tables can take only string keys  
+Strins are quoted with `'`  
+Booleans `false`, `true`, `on`, `off`  
+Null `null`  
+Whitespaces ` `, `\t`, `\v`, `\r`, `\l`, `\f`  
+End of line `\l`, `\r`  
+Comments `#`
+
+## Implementations ⚙️
