@@ -3,16 +3,18 @@ Pack of Data
 By Dmitry Mitrofanov (@pixeye)
 
 ## What is it?
-Readable and easy typed text format both for serialization and making config files purposes.  
-Pods is a superset of Json with comments and a simple notation that's convenient for direct editing.
-
+Easy to read and type text format for serialization and config files.  
 
 ## Why?
-  Json may be used on projects both for serialization tasks and for writing configuration files. Despite the obvious advantages of Json as a format (it's intuitive, more or less good for data serialization and widely spread), it's harder to read and edit than, for example, Toml/Yaml. Toml is easy to read, but it's not designed for serialization, and Yaml, subjectively, is a complex format. 
+  Json may be used on projects both for serialization tasks and for writing configuration files. Despite the obvious advantages of Json as a format (it's intuitive, more or less good for data serialization and widely spread), it's harder to read and edit than, for example, Toml/Yaml. Toml is easy to read, but it's not designed for serialization, and Yaml, subjectively, is a complex format. I wanted to make a format with 3 things in mind:
+  - easy to type and read
+  - can be used both for configs and serialization with different visual and syntax output but still based on the same set of grammar rules
+  - json-like as it's by far most widely used format and mostly everyone who know Json can use Pods 
 
   
 ## Examples 📗
   Pods can be written in several formats: Dense, Sparse and Compact (relatively)  
+  The properties can be nested and can represent hierarchical data. 
 Sparse format:
 ```
 (
@@ -86,8 +88,24 @@ Dense format:
     Roland.dead = false;
 )
   ```
+Also valid format:
+```
+(
+  Alain
+    .name = 'Alain';
+    .pos.x = 5;;
+    .pos.y = 10;;
+    .pos.z = 0;;
+    .power = 90;
+    .cost = 10;
+    .kind = 'Mage';
+    .friends = ['Cuthbert','Roland'];
+    .inventory = [['book'='Homilies and Meditations']];
+    .dead = true;
+)
+```
 ## Format rules 📘
-Objects begin with `.` or `(` and ends with `;` or `)`  
+Objects begin with `.` or `(` and ends with `;` or `)`
 Arrays  begin with `[` and ends with `]`  
 Tables  begin with `[[` and ends with `]]`  
 Tables can take only string keys  
