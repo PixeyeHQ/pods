@@ -42,7 +42,7 @@ Sparse format:
     power   = 150
     cost    = 20
     kind    = 'Melee'
-    items   = [['hawk'='David']]
+    items   = [['pet'='David']]
     friends = ['Cuthbert','Alain','Susan']
     dead    = false
   )
@@ -81,7 +81,7 @@ Dense format:
     Roland.power = 150;
     Roland.cost = 20;
     Roland.kind = 'Melee';
-    Roland.items = [['hawk'='David']];
+    Roland.items = [['pet'='David']];
     Roland.friends = ['Cuthbert','Alain','Susan'];
     Roland.dead = false;
 )
